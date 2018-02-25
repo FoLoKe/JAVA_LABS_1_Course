@@ -11,15 +11,10 @@ public class  Palindrome
 		return g;
 	}
 
-	public static boolean isPalindrome(String s,String k)
+	public static boolean isPalindrome(String s)
 	{
-		String g="";
-		int i=s.length();
-		for(int j=i-1;j>=0;j--)
-		{
-			g+=s.charAt(j);
-		}
-		return g.equals(k);
+		String k=reverseString(s);
+		return s.equals(k);
 	}
 	
 	public static void main(String[] args)
@@ -28,8 +23,9 @@ public class  Palindrome
 		{
  			String s = args[i];
 			String k=reverseString(s);
+			System.out.println(s);
 			System.out.println(k);
-			System.out.print(isPalindrome(s,k));
+			System.out.print(isPalindrome(s));
 		}				
 	}
 
